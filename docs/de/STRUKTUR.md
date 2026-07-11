@@ -22,13 +22,6 @@
 | `webfrontend/html/snapshot.cgi` | Externer/manueller Snapshot-Endpunkt |
 | `webfrontend/html/css/reolinkproxy.css` | Plugin-CSS |
 
-## Nicht mehr vorhanden ab 0.5.3
-
-```text
-bin/snapshot_runner.pl
-reolinkproxy-snapshot.timer
-reolinkproxy-snapshot.service
-```
 
 ---
 
