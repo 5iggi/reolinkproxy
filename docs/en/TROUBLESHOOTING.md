@@ -1,4 +1,14 @@
-# Troubleshooting
+<p align="center">
+  <img src="../../icons/icon_128.png" alt="Reolink Proxy Logo" width="80">
+</p>
+
+<h1 align="center">Troubleshooting</h1>
+
+<p align="center">
+  <a href="README.md">Start</a> · <a href="TESTS.md">Tests</a>
+</p>
+
+---
 
 ## Logs
 
@@ -19,10 +29,15 @@ reolinkproxy-wrapper.log
 upgrade.log
 ```
 
-## Old frontend still visible
+## No snapshot image
 
-Use a cache buster:
+Test the manual snapshot with debug output:
 
-```text
-/admin/plugins/reolinkproxy/index.cgi?nocache=0530
+```bash
+curl "http://<loxberry-ip>/plugins/reolinkproxy/snapshot.cgi?camera=<camera>&debug=1"
+tail -n 80 /opt/loxberry/log/plugins/reolinkproxy/snapshot.cgi.log
 ```
+
+---
+
+<p align="center"><a href="README.md">Back</a></p>
