@@ -19,17 +19,6 @@
 - **Snapshot Timeout**: maximale Laufzeit von `ffmpeg` beim manuellen Snapshot.
 - **Snapshot Quality**: JPEG-Qualität für manuelle Snapshots.
 
-## Entfernte Einstellungen
-
-Folgende Einstellungen gibt es ab 0.5.3 nicht mehr im WebUI:
-
-```text
-snapshot_enabled
-snapshot_interval
-battery_snapshot_interval
-wired_snapshot_interval
-```
-
 ## Kameraeinstellungen
 
 - **Name**: lokaler Kameraname, z. B. `argus4pro`.
