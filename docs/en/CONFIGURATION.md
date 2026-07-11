@@ -15,11 +15,3 @@
 - **Snapshot Timeout**: maximum `ffmpeg` runtime for manual snapshots.
 - **Snapshot Quality**: JPEG quality for manual snapshots.
 
-## Removed settings
-
-```text
-snapshot_enabled
-snapshot_interval
-battery_snapshot_interval
-wired_snapshot_interval
-```
