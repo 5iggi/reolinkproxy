@@ -21,9 +21,3 @@
 | `<camera>_rtsp_main` | `0/1` | Main RTSP URL can be derived |
 | `<camera>_rtsp_sub` | `0/1` | Sub RTSP URL can be derived |
 
-## Removed from 0.5.3
-
-```text
-reolinkproxy_snapshot_global_enabled
-<camera>_snapshot_enabled
-```
