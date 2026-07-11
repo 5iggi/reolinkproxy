@@ -17,10 +17,3 @@
 | `webfrontend/html/snapshot.cgi` | External/manual snapshot endpoint |
 | `webfrontend/html/css/reolinkproxy.css` | Plugin CSS |
 
-## Removed from 0.5.3
-
-```text
-bin/snapshot_runner.pl
-reolinkproxy-snapshot.timer
-reolinkproxy-snapshot.service
-```
