@@ -20,8 +20,7 @@
   <a href="BINARIES.md">Binaries</a> ·
   <a href="SYSTEMD.md">Systemd</a> ·
   <a href="TESTS.md">Tests</a> ·
-  <a href="TROUBLESHOOTING.md">Troubleshooting</a> ·
-  <a href="CHANGELOG.md">Changelog</a>
+  <a href="TROUBLESHOOTING.md">Troubleshooting</a>
 </p>
 
 ---
