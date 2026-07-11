@@ -40,8 +40,6 @@ systemctl list-timers --all | grep reolinkproxy
 systemctl status reolinkproxy-snapshot.timer --no-pager
 ```
 
-Ab 0.5.3 sollte kein Snapshot-Timer mehr aktiv sein.
-
 ---
 
 <p align="center"><a href="README.md">Zurück</a></p>
