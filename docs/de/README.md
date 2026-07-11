@@ -6,7 +6,7 @@
   <img alt="Snapshots" src="https://img.shields.io/badge/Snapshots-extern%20ausgeloest-yellow.svg">
 </p>
 <p align="center">
-  <a href="INSTALLATION.md">Installation</a> · <a href="KONFIGURATION.md">Konfiguration</a> · <a href="LOXONE.md">Loxone</a> · <a href="STATUSWERTE.md">Statuswerte</a> · <a href="ENDPUNKTE.md">Endpunkte</a> · <a href="STRUKTUR.md">Struktur</a> · <a href="BINARIES.md">Binaries</a> · <a href="SYSTEMD.md">Systemd</a> · <a href="TESTS.md">Tests</a> · <a href="FEHLERBEHEBUNG.md">Fehlerbehebung</a> · <a href="CHANGELOG.md">Changelog</a>
+  <a href="INSTALLATION.md">Installation</a> · <a href="KONFIGURATION.md">Konfiguration</a> · <a href="LOXONE.md">Loxone</a> · <a href="STATUSWERTE.md">Statuswerte</a> · <a href="ENDPUNKTE.md">Endpunkte</a> · <a href="STRUKTUR.md">Struktur</a> · <a href="BINARIES.md">Binaries</a> · <a href="SYSTEMD.md">Systemd</a> · <a href="TESTS.md">Tests</a> · <a href="FEHLERBEHEBUNG.md">Fehlerbehebung</a> 
 </p>
 
 ---
