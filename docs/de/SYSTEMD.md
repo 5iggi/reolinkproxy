@@ -18,15 +18,6 @@ systemctl restart reolinkproxy.service
 journalctl -u reolinkproxy.service -n 120 --no-pager
 ```
 
-## Entfernte Dienste ab 0.5.3
-
-```text
-reolinkproxy-snapshot.timer
-reolinkproxy-snapshot.service
-```
-
-Diese Dienste werden bei Installation/Upgrade entfernt, weil Snapshots extern ausgelöst werden.
-
 ---
 
 <p align="center"><a href="README.md">Zurück</a></p>
