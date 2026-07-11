@@ -32,23 +32,6 @@ curl "http://<loxberry-ip>/plugins/reolinkproxy/snapshot.cgi?camera=<kamera>&deb
 tail -n 80 /opt/loxberry/log/plugins/reolinkproxy/snapshot.cgi.log
 ```
 
-## Altes Frontend sichtbar
-
-Browser-Cache umgehen:
-
-```text
-/admin/plugins/reolinkproxy/index.cgi?nocache=0530
-```
-
-## Alte Snapshot-Timer entfernen
-
-```bash
-sudo systemctl disable --now reolinkproxy-snapshot.timer
-sudo systemctl disable --now reolinkproxy-snapshot.service
-sudo rm -f /etc/systemd/system/reolinkproxy-snapshot.timer
-sudo rm -f /etc/systemd/system/reolinkproxy-snapshot.service
-sudo systemctl daemon-reload
-```
 
 ---
 
