@@ -26,12 +26,7 @@
 | `<kamera>_rtsp_main` | `0/1` | Main-RTSP-URL ableitbar |
 | `<kamera>_rtsp_sub` | `0/1` | Sub-RTSP-URL ableitbar |
 
-## Entfernte Werte ab 0.5.3
 
-```text
-reolinkproxy_snapshot_global_enabled
-<kamera>_snapshot_enabled
-```
 
 Diese Werte wurden entfernt, weil keine interne Snapshot-Planung mehr existiert.
 
