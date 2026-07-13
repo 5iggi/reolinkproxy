@@ -1,45 +1,49 @@
 <p align="center">
-  <img src="icons/icon_256.png" alt="Reolink Proxy Logo" width="120">
+  <img src="docs/assets/reolinkproxy-logo.svg" alt="Reolink Proxy Logo" width="128" height="128">
 </p>
 
 <h1 align="center">Reolink Proxy · LoxBerry Plugin</h1>
 
 <p align="center">
-  <img alt="Version" src="https://img.shields.io/badge/version-0.3.51-blue.svg">
-  <img alt="LoxBerry" src="https://img.shields.io/badge/LoxBerry-v3%20%7C%20v4-green.svg">
-  <img alt="Architectures" src="https://img.shields.io/badge/Arch-amd64%20%7C%20arm64%20%7C%20armv7-orange.svg">
-  <img alt="Status" src="https://img.shields.io/badge/status-testing-yellow.svg">
+  <img alt="LoxBerry" src="https://img.shields.io/badge/LoxBerry-v3%20/%20v4-4a7a12">
+  <img alt="RTSP" src="https://img.shields.io/badge/RTSP-ONVIF-blue">
+  <img alt="MQTT" src="https://img.shields.io/badge/MQTT-UDP-orange">
+  <img alt="Loxone" src="https://img.shields.io/badge/Loxone-Config%20Export-informational">
+  <img alt="License" src="https://img.shields.io/badge/License-MIT-lightgrey">
 </p>
 
-<p align="center">
-  <strong>Native Reolink Proxy Integration for LoxBerry</strong><br>
-  RTSP/ONVIF · Snapshots · Loxone Config Export · Reolink UID/IP Cameras
-</p>
 
-<p align="center">
-  <a href="docs/README.md"><strong>Documentation / Dokumentation</strong></a>
-</p>
+Native Reolink Proxy Integration for LoxBerry  
+RTSP/ONVIF · Snapshots · MQTT/UDP · Loxone Config Export · Reolink UID/IP Cameras
+
+[Documentation / Dokumentation](docs/README.md)
 
 ---
 
-## Quick start
+## Deutsch
 
-Please open the documentation start page and choose your language:
+**Reolink Proxy** ist ein LoxBerry Plugin zur lokalen Einbindung von Reolink Kameras. Ein wichtiger Anwendungsfall ist die Nutzung von Reolink WLAN-Kameras, die sonst einen Reolink Hub benötigen. Das Plugin kann diese Kameras per Reolink UID über den zugrunde liegenden `reolinkproxy` anbinden und lokale RTSP-/ONVIF-Endpunkte bereitstellen. PoE- und klassische IP-Kameras können ebenfalls über Hostname oder IP-Adresse eingebunden werden.
 
-```text
-docs/README.md
-```
+Das Plugin ergänzt den nativen Proxy um LoxBerry-WebUI, Dienstverwaltung, Setup-Guard, MQTT-/UDP-Anbindung, Snapshot-Endpunkte und Loxone Config Vorlagen.
 
-## Schnellstart
+## English
 
-Bitte die Dokumentations-Startseite öffnen und die Sprache auswählen:
+**Reolink Proxy** is a LoxBerry plugin for local integration of Reolink cameras. A key use case is using Reolink Wi-Fi cameras that would otherwise require a Reolink Hub. The plugin can connect to these cameras through Reolink UID by using the underlying `reolinkproxy` and provides local RTSP/ONVIF endpoints. PoE and regular IP cameras can also be integrated via hostname or IP address.
 
-```text
-docs/README.md
-```
+The plugin adds LoxBerry WebUI, service management, setup guard, MQTT/UDP integration, snapshot endpoints and Loxone Config templates around the native proxy.
 
 ---
 
-<p align="center">
-  Maintained by <a href="https://github.com/5iggi">5iggi</a>
-</p>
+## Upstream / Quelle
+
+This LoxBerry plugin is built around the upstream project **Shareed2k/reolinkproxy**:
+
+```text
+https://github.com/Shareed2k/reolinkproxy/
+```
+
+The upstream project provides the Go proxy that translates Reolink's Baichuan protocol into standard RTSP streams and a compliant ONVIF API. This plugin packages and manages that proxy for LoxBerry and Loxone use cases.
+
+---
+
+Maintained by [5iggi](https://github.com/5iggi)
