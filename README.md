@@ -46,4 +46,6 @@ The upstream project provides the Go proxy that translates Reolink's Baichuan pr
 
 ---
 
-<p align="center">Maintained by [5iggi](https://github.com/5iggi)</p>
+<p align="center">
+  Maintained by <a href="https://github.com/5iggi">5iggi</a>
+</p>
