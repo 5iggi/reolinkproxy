@@ -22,13 +22,13 @@ RTSP/ONVIF · Snapshots · MQTT/UDP · Loxone Config Export · Reolink UID/IP Ca
 
 ## Deutsch
 
-**Reolink Proxy** ist ein LoxBerry Plugin zur lokalen Einbindung von Reolink Kameras. Ein wichtiger Anwendungsfall ist die Nutzung von Reolink WLAN-Kameras, die sonst einen Reolink Hub benötigen. Das Plugin kann diese Kameras per Reolink UID über den zugrunde liegenden `reolinkproxy` anbinden und lokale RTSP-/ONVIF-Endpunkte bereitstellen. PoE- und klassische IP-Kameras können ebenfalls über Hostname oder IP-Adresse eingebunden werden.
+**Reolink Proxy** ist ein LoxBerry Plugin zur lokalen Einbindung von Reolink Kameras. Ein wichtiger Anwendungsfall ist **die Nutzung von Reolink WLAN-Kameras, die sonst einen Reolink Hub benötigen**. Das Plugin kann diese Kameras per Reolink UID über den zugrunde liegenden `reolinkproxy` anbinden und lokale RTSP-/ONVIF-Endpunkte bereitstellen. PoE- und klassische IP-Kameras können ebenfalls über Hostname oder IP-Adresse eingebunden werden.
 
 Das Plugin ergänzt den nativen Proxy um LoxBerry-WebUI, Dienstverwaltung, Setup-Guard, MQTT-/UDP-Anbindung, Snapshot-Endpunkte und Loxone Config Vorlagen.
 
 ## English
 
-**Reolink Proxy** is a LoxBerry plugin for local integration of Reolink cameras. A key use case is using Reolink Wi-Fi cameras that would otherwise require a Reolink Hub. The plugin can connect to these cameras through Reolink UID by using the underlying `reolinkproxy` and provides local RTSP/ONVIF endpoints. PoE and regular IP cameras can also be integrated via hostname or IP address.
+**Reolink Proxy** is a LoxBerry plugin for local integration of Reolink cameras. A key use case is **using Reolink Wi-Fi cameras that would otherwise require a Reolink Hub**. The plugin can connect to these cameras through Reolink UID by using the underlying `reolinkproxy` and provides local RTSP/ONVIF endpoints. PoE and regular IP cameras can also be integrated via hostname or IP address.
 
 The plugin adds LoxBerry WebUI, service management, setup guard, MQTT/UDP integration, snapshot endpoints and Loxone Config templates around the native proxy.
 
@@ -46,4 +46,4 @@ The upstream project provides the Go proxy that translates Reolink's Baichuan pr
 
 ---
 
-Maintained by [5iggi](https://github.com/5iggi)
+<p align="center">Maintained by [5iggi](https://github.com/5iggi)</p>
