@@ -37,4 +37,8 @@ The English documentation describes installation, initial setup, cameras, settin
 
 ---
 
-[Back to project README](../README.md)
+<p align="center">
+  <img src="assets/reolinkproxy-logo.svg" alt="Reolink Proxy Logo" width="24" height="24"><br>
+  <strong>Reolink Proxy</strong><br>
+  Loxone · LoxBerry · Reolink Proxy
+</p>
