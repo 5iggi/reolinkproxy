@@ -30,6 +30,12 @@ reolinkproxy/<camera>/status/snapshot_ts
 reolinkproxy/status
 ```
 
+## Battery note for MQTT motion
+
+On battery cameras, continuous MQTT motion usage may increase battery consumption because `reolinkproxy` needs to actively monitor the camera for events.
+
+For cameras with `battery_camera=true`, the plugin automatically applies battery-saving lifecycle options. These reduce unnecessary active preview sessions, but depending on the camera model they may affect MQTT motion response time.
+
 ## UDP Legacy / Debug
 
 UDP is optional and intended for tests, debugging and legacy Loxone setups. UDP sends plugin-generated messages, for example:
