@@ -40,6 +40,13 @@ MQTT: reolinkproxy/garten/status/motion=0
 MQTT: reolinkproxy/garten/status/snapshot_size=89422
 ```
 
+## Akku-Hinweis bei Motion-MQTT
+
+Bei Akku-Kameras kann die dauerhafte Nutzung von Motion-MQTT den Akku stärker belasten, da `reolinkproxy` die Kamera für die Ereigniserkennung aktiv beobachten muss.
+
+Für Kameras mit `battery_camera=true` setzt das Plugin automatisch akku-schonende Lifecycle-Optionen. Diese reduzieren unnötige aktive Preview-Sessions, können aber je nach Kamera-Modell Einfluss auf die Reaktionszeit von Motion-MQTT haben.
+
+
 ## UDP Legacy / Debug
 
 UDP ist optional und für Test, Debug und ältere Loxone-Setups vorgesehen. UDP sendet Plugin-eigene Meldungen, zum Beispiel:
