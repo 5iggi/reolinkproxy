@@ -14,6 +14,21 @@ Das Plugin unterstützt zwei grundlegende Zugriffsarten:
 - **UID** für Reolink WLAN-/UID-Kameras, insbesondere für Kameras, die sonst einen Reolink Hub benötigen.
 - **Host/IP** für PoE- und klassische IP-Kameras.
 
+
+## Akku-Kameras
+
+Für Akku-/UID-Kameras kann `battery_camera=true` gesetzt werden.
+
+Wenn eine Kamera als Akku-Kamera markiert ist, erzeugt das Plugin automatisch akku-schonende Lifecycle-Optionen für `reolinkproxy`:
+
+```text
+REOLINK_CAMERA_<n>_BATTERY_CAMERA=true
+REOLINK_CAMERA_<n>_IDLE_DISCONNECT=true
+REOLINK_CAMERA_<n>_IDLE_TIMEOUT=10s
+REOLINK_CAMERA_<n>_PAUSE_ON_CLIENT=true
+REOLINK_CAMERA_<n>_PAUSE_ON_MOTION=true
+REOLINK_CAMERA_<n>_PAUSE_TIMEOUT=3s
+
 ## Pflichtfelder
 
 Eine Kamera ist gültig, wenn folgende Daten vorhanden sind:
