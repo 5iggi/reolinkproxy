@@ -1,11 +1,12 @@
-<p align="center"><img src="../assets/reolinkproxy-logo.svg" alt="Reolink Proxy Logo" width="96" height="96"></p>
+<p align="center">
+  <img src="../assets/reolinkproxy-logo.svg" alt="Reolink Proxy Logo" width="96" height="96">
+</p>
 
 ## Troubleshooting
 
 [Installation](INSTALLATION.md) · [Configuration](CONFIGURATION.md) · [Cameras](CAMERAS.md) · [MQTT/UDP](MQTT_UDP.md) · [Loxone](LOXONE.md) · [Endpoints/API](ENDPOINTS.md) · [Status Values](STATUS_VALUES.md) · [Structure](STRUCTURE.md) · [Binaries](BINARIES.md) · [Systemd](SYSTEMD.md) · [Tests](TESTS.md) · [Troubleshooting](TROUBLESHOOTING.md)
 
 ---
-
 
 ## Logs
 
@@ -26,6 +27,7 @@ reolinkproxy-wrapper.log
 upgrade.log
 mqtt_publish.log
 mqtt_subscriptions.log
+mqtt_gateway_control.log
 ```
 
 ## Service does not start
@@ -38,19 +40,42 @@ tail -n 120 /opt/loxberry/log/plugins/reolinkproxy/generate_env.log
 
 The service remains stopped without a valid camera.
 
-## Export problem
+## MQTT does not arrive at the Miniserver
 
 ```bash
-sudo -u loxberry /usr/bin/perl /opt/loxberry/bin/plugins/reolinkproxy/export_loxone.pl
+grep -R "reolinkproxy/#" /opt/loxberry/config/system/subscriptions.json
+sudo /opt/loxberry/bin/plugins/reolinkproxy/mqtt_gateway_control.sh reload
+sudo /opt/loxberry/bin/plugins/reolinkproxy/mqtt_gateway_control.sh status
 ```
 
-The generated ZIP is written below:
+Expected:
 
 ```text
-/tmp/reolinkproxy-loxone-export-*/ReolinkProxy_Loxone_Export.zip
+mqttgateway.pl count: 1
+mqttfinder.pl count: 1
 ```
 
+## UDP check
+
+```bash
+sudo -u loxberry /usr/bin/perl /opt/loxberry/bin/plugins/reolinkproxy/udp_send.pl system test 1
+sudo -u loxberry /usr/bin/perl /opt/loxberry/bin/plugins/reolinkproxy/udp_send.pl garten snapshot_ok 1
+```
+
+If needed:
+
+```bash
+sudo tcpdump -ni any udp and host <MINISERVER_IP> and port 7001 -A
+```
 
 ---
 
 [Back](README.md)
+---
+
+<p align="center">
+  <img src="../assets/reolinkproxy-logo.svg" alt="Reolink Proxy Logo" width="24" height="24"><br>
+  <strong>Reolink Proxy</strong><br>
+  Loxone · LoxBerry · Reolink Proxy
+</p>
+

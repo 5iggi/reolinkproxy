@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/reolinkproxy-logo.svg" alt="Reolink Proxy Logo" width="96" height="96">
+  <img src="assets/reolinkproxy-logo.svg" alt="Reolink Proxy Logo" width="128" height="128">
 </p>
 
 <h1 align="center">Reolink Proxy · Documentation</h1>
@@ -7,18 +7,20 @@
 <p align="center">
   <img alt="LoxBerry" src="https://img.shields.io/badge/LoxBerry-v3%20/%20v4-4a7a12">
   <img alt="RTSP" src="https://img.shields.io/badge/RTSP-ONVIF-blue">
-  <img alt="MQTT" src="https://img.shields.io/badge/MQTT-UDP-orange">
+  <img alt="MQTT" src="https://img.shields.io/badge/MQTT-recommended-orange">
+  <img alt="UDP" src="https://img.shields.io/badge/UDP-Legacy%20/%20Debug-lightgrey">
   <img alt="Loxone" src="https://img.shields.io/badge/Loxone-Config%20Export-informational">
   <img alt="License" src="https://img.shields.io/badge/License-MIT-lightgrey">
 </p>
-<p align="center"><strong>Bitte Sprache auswählen · Please select language</strong></p>
+
+
+<p align="center">Bitte Sprache auswählen · Please select language</p>
 
 ---
 
 <p align="center">
-  <a href="de/README.md"><img alt="Deutsch" src="https://img.shields.io/badge/Deutsch-Dokumentation-black?style=for-the-badge&labelColor=dd0000&color=ffce00"></a>
-  &nbsp;&nbsp;
-  <a href="en/README.md"><img alt="English" src="https://img.shields.io/badge/English-Documentation-white?style=for-the-badge&labelColor=012169&color=C8102E"></a>
+  <a href="de/README.md"><img alt="Deutsch" src="https://img.shields.io/badge/Deutsch-Dokumentation-1f6feb?style=for-the-badge"></a>
+  <a href="en/README.md"><img alt="English" src="https://img.shields.io/badge/English-Documentation-2ea043?style=for-the-badge"></a>
 </p>
 
 ---
@@ -42,3 +44,4 @@ The English documentation describes installation, initial setup, cameras, settin
   <strong>Reolink Proxy</strong><br>
   Loxone · LoxBerry · Reolink Proxy
 </p>
+

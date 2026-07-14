@@ -1,4 +1,6 @@
-<p align="center"><img src="../assets/reolinkproxy-logo.svg" alt="Reolink Proxy Logo" width="96" height="96"></p>
+<p align="center">
+  <img src="../assets/reolinkproxy-logo.svg" alt="Reolink Proxy Logo" width="96" height="96">
+</p>
 
 ## Loxone Config Export
 
@@ -6,14 +8,13 @@
 
 ---
 
-
 ## Export endpoint
 
 ```text
 /admin/plugins/reolinkproxy/export_loxone.cgi
 ```
 
-The export is generated on download.
+The export is generated on download. Current cameras, streams, IP address, MQTT topics and UDP settings are used.
 
 ## ZIP content
 
@@ -33,19 +34,38 @@ README_EN.md
 - **VIU UDP**: UDP Virtual Input for UDP legacy/debug.
 - **VO Combined**: combined Virtual Output for camera commands.
 
+VI HTTP, VIU MQTT and VIU UDP are separated. VO is combined.
+
+Recommended LoxBerry MQTT subscription:
+
+```text
+reolinkproxy/#
+```
+
+Common inputs:
+
+```text
+motion
+snapshot_ok
+snapshot_size
+snapshot_ts
+service active
+```
+
 Common output:
 
 ```text
 <camera> snapshot
 ```
 
-Snapshot endpoint:
-
-```text
-/plugins/reolinkproxy/snapshot.cgi?camera=<camera>
-```
-
-
 ---
 
 [Back](README.md)
+---
+
+<p align="center">
+  <img src="../assets/reolinkproxy-logo.svg" alt="Reolink Proxy Logo" width="24" height="24"><br>
+  <strong>Reolink Proxy</strong><br>
+  Loxone · LoxBerry · Reolink Proxy
+</p>
+

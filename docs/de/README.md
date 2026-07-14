@@ -1,25 +1,28 @@
-<p align="center"><img src="../assets/reolinkproxy-logo.svg" alt="Reolink Proxy Logo" width="96" height="96"></p>
+<p align="center">
+  <img src="../assets/reolinkproxy-logo.svg" alt="Reolink Proxy Logo" width="96" height="96">
+</p>
 
 <h1 align="center">Reolink Proxy · LoxBerry Plugin</h1>
 
 <p align="center">
   <img alt="LoxBerry" src="https://img.shields.io/badge/LoxBerry-v3%20/%20v4-4a7a12">
   <img alt="RTSP" src="https://img.shields.io/badge/RTSP-ONVIF-blue">
-  <img alt="MQTT" src="https://img.shields.io/badge/MQTT-UDP-orange">
+  <img alt="MQTT" src="https://img.shields.io/badge/MQTT-recommended-orange">
+  <img alt="UDP" src="https://img.shields.io/badge/UDP-Legacy%20/%20Debug-lightgrey">
   <img alt="Loxone" src="https://img.shields.io/badge/Loxone-Config%20Export-informational">
   <img alt="License" src="https://img.shields.io/badge/License-MIT-lightgrey">
 </p>
+
 
 [Installation](INSTALLATION.md) · [Konfiguration](KONFIGURATION.md) · [Kameras](KAMERAS.md) · [MQTT/UDP](MQTT_UDP.md) · [Loxone](LOXONE.md) · [Endpunkte/API](ENDPUNKTE.md) · [Statuswerte](STATUSWERTE.md) · [Struktur](STRUKTUR.md) · [Binaries](BINARIES.md) · [Systemd](SYSTEMD.md) · [Tests](TESTS.md) · [Fehlerbehebung](FEHLERBEHEBUNG.md)
 
 ---
 
-
 ## Überblick
 
-**Reolink Proxy** ist ein natives LoxBerry Plugin zur lokalen Einbindung von Reolink Kameras in Smart-Home-Installationen. Im Mittelpunkt steht unter anderem eine Lösung für Reolink WLAN-Kameras, die sonst einen Reolink Hub benötigen. Diese Kameras können über Reolink UID angebunden und lokal als RTSP-/ONVIF-Endpunkte bereitgestellt werden.
+**Reolink Proxy** ist ein natives LoxBerry Plugin zur lokalen Einbindung von Reolink Kameras in Smart-Home-Installationen. Im Mittelpunkt steht unter anderem eine Lösung für Reolink WLAN-Kameras, die sonst einen Reolink Hub benötigen. Diese Kameras können über Reolink UID angebunden und lokal als RTSP-/ONVIF-Endpunkte bereitgestellt werden. PoE- und klassische IP-Kameras von Reolink können zusätzlich direkt per Hostname oder IP-Adresse eingebunden werden.
 
-PoE- und klassische IP-Kameras von Reolink können zusätzlich direkt per Hostname oder IP-Adresse eingebunden werden. Die Konfiguration erfolgt im LoxBerry-WebUI. Der Dienst `reolinkproxy.service` wird aus den gespeicherten Einstellungen und Kameraeinträgen erzeugt.
+Die Konfiguration erfolgt im LoxBerry-WebUI. Der Dienst `reolinkproxy.service` wird aus den gespeicherten Einstellungen und Kameraeinträgen erzeugt.
 
 ## Funktionen
 
@@ -57,7 +60,6 @@ Der Upstream-Proxy übersetzt Reolinks Baichuan-Protokoll in RTSP-Streams und ON
 
 Eine Kamera gilt als gültig, wenn ein Name vorhanden ist und zusätzlich entweder eine UID oder ein Host/IP-Wert hinterlegt ist.
 
-
 ---
 
 <p align="center">
@@ -65,3 +67,4 @@ Eine Kamera gilt als gültig, wenn ein Name vorhanden ist und zusätzlich entwed
   <strong>Reolink Proxy</strong><br>
   Loxone · LoxBerry · Reolink Proxy
 </p>
+

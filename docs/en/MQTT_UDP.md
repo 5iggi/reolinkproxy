@@ -1,4 +1,6 @@
-<p align="center"><img src="../assets/reolinkproxy-logo.svg" alt="Reolink Proxy Logo" width="96" height="96"></p>
+<p align="center">
+  <img src="../assets/reolinkproxy-logo.svg" alt="Reolink Proxy Logo" width="96" height="96">
+</p>
 
 ## MQTT and UDP
 
@@ -6,33 +8,57 @@
 
 ---
 
-
 ## MQTT
 
-MQTT is the preferred channel for status values.
+MQTT is the recommended path for production camera events and snapshot status. ReolinkProxy publishes camera events such as motion via MQTT. The plugin additionally publishes snapshot status values via MQTT.
+
+Recommended LoxBerry MQTT subscription:
+
+```text
+reolinkproxy/#
+```
+
+This wildcard subscription forwards all current and future topics below the plugin base topic to the Miniserver.
+
+Typical topics:
 
 ```text
 reolinkproxy/<camera>/status/motion
 reolinkproxy/<camera>/status/snapshot_ok
 reolinkproxy/<camera>/status/snapshot_size
 reolinkproxy/<camera>/status/snapshot_ts
-```
-
-Subscriptions can be updated with:
-
-```bash
-python3 /opt/loxberry/bin/plugins/reolinkproxy/mqtt_subscriptions_update.py
+reolinkproxy/status
 ```
 
 ## UDP Legacy / Debug
 
-UDP is optional and intended for existing installations or tests.
+UDP is optional and intended for tests, debugging and legacy Loxone setups. UDP sends plugin-generated messages, for example:
 
 ```text
-reolinkproxy.<camera>.<event>=<value>
+reolinkproxy.system.test=1
+reolinkproxy.garten.snapshot_ok=1
 ```
 
+ReolinkProxy motion events are not generated as UDP messages. Production motion events are sent via MQTT.
+
+## Tests
+
+```bash
+mosquitto_sub -h 127.0.0.1 -p 1883 -t 'reolinkproxy/#' -v -u loxberry -P 'PASSWORD'
+```
+
+```bash
+sudo -u loxberry /usr/bin/perl /opt/loxberry/bin/plugins/reolinkproxy/udp_send.pl system test 1
+```
 
 ---
 
 [Back](README.md)
+---
+
+<p align="center">
+  <img src="../assets/reolinkproxy-logo.svg" alt="Reolink Proxy Logo" width="24" height="24"><br>
+  <strong>Reolink Proxy</strong><br>
+  Loxone · LoxBerry · Reolink Proxy
+</p>
+
