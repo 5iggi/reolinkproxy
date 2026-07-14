@@ -12,6 +12,22 @@
 - **UID** for Reolink Wi-Fi/UID cameras, especially models that would otherwise require a Reolink Hub.
 - **Host/IP** for PoE and regular IP cameras.
 
+
+## Battery cameras 
+
+For battery/UID cameras, `battery_camera=true` can be set.
+
+When a camera is marked as a battery camera, the plugin automatically generates battery-saving lifecycle options for `reolinkproxy`:
+
+```text
+REOLINK_CAMERA_<n>_BATTERY_CAMERA=true
+REOLINK_CAMERA_<n>_IDLE_DISCONNECT=true
+REOLINK_CAMERA_<n>_IDLE_TIMEOUT=10s
+REOLINK_CAMERA_<n>_PAUSE_ON_CLIENT=true
+REOLINK_CAMERA_<n>_PAUSE_ON_MOTION=true
+REOLINK_CAMERA_<n>_PAUSE_TIMEOUT=3s
+```
+
 ## Required data
 
 A camera is valid when it has:
