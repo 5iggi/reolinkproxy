@@ -13,11 +13,13 @@
 - **Host/IP** for PoE and regular IP cameras.
 
 
-## Battery cameras 
+## Battery cameras
 
 For battery/UID cameras, `battery_camera=true` can be set.
 
-When a camera is marked as a battery camera, the plugin automatically generates battery-saving lifecycle options for `reolinkproxy`:
+When a camera is marked as a battery camera, the plugin automatically generates battery-saving lifecycle options for `reolinkproxy`.
+
+Default values:
 
 ```text
 REOLINK_CAMERA_<n>_BATTERY_CAMERA=true
@@ -27,6 +29,21 @@ REOLINK_CAMERA_<n>_PAUSE_ON_CLIENT=true
 REOLINK_CAMERA_<n>_PAUSE_ON_MOTION=true
 REOLINK_CAMERA_<n>_PAUSE_TIMEOUT=3s
 ```
+
+Explicitly configured camera values are preserved and override these automatic defaults.
+
+Example:
+
+```text
+REOLINK_CAMERA_0_IDLE_TIMEOUT=30s
+REOLINK_CAMERA_0_PAUSE_ON_MOTION=false
+REOLINK_CAMERA_0_PAUSE_TIMEOUT=2s
+```
+
+These options help prevent idle preview sessions from staying active unnecessarily. Depending on the camera model and firmware, this may affect MQTT motion response time.
+
+For PoE and permanently powered IP cameras, this setting is usually not required.
+
 
 ## Required data
 
