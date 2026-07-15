@@ -19,7 +19,9 @@ Das Plugin unterstützt zwei grundlegende Zugriffsarten:
 
 Für Akku-/UID-Kameras kann `battery_camera=true` gesetzt werden.
 
-Wenn eine Kamera als Akku-Kamera markiert ist, erzeugt das Plugin automatisch akku-schonende Lifecycle-Optionen für `reolinkproxy`:
+Wenn eine Kamera als Akku-Kamera markiert ist, erzeugt das Plugin automatisch akku-schonende Lifecycle-Optionen für `reolinkproxy`.
+
+Standardwerte:
 
 ```text
 REOLINK_CAMERA_<n>_BATTERY_CAMERA=true
@@ -28,6 +30,21 @@ REOLINK_CAMERA_<n>_IDLE_TIMEOUT=10s
 REOLINK_CAMERA_<n>_PAUSE_ON_CLIENT=true
 REOLINK_CAMERA_<n>_PAUSE_ON_MOTION=true
 REOLINK_CAMERA_<n>_PAUSE_TIMEOUT=3s
+```
+
+Bereits explizit konfigurierte Werte der Kamera werden beibehalten und überschreiben diese automatischen Defaults.
+
+Beispiel:
+
+```text
+REOLINK_CAMERA_0_IDLE_TIMEOUT=30s
+REOLINK_CAMERA_0_PAUSE_ON_MOTION=false
+REOLINK_CAMERA_0_PAUSE_TIMEOUT=2s
+```
+
+Diese Optionen sollen verhindern, dass idle Preview-Sessions unnötig aktiv bleiben. Je nach Kamera-Modell und Firmware kann dies Einfluss auf die Reaktionszeit von MQTT-Motion-Ereignissen haben.
+
+Für PoE- und dauerhaft versorgte IP-Kameras ist diese Einstellung normalerweise nicht erforderlich.
 
 ## Pflichtfelder
 
